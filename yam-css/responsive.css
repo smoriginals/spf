@@ -18,7 +18,7 @@
 /* ========== LARGE DESKTOPS (1200px+) ========== */
 @media (min-width: 1200px) {
     .hero-carousel .carousel-caption h2 { font-size: 4rem; }
-    .container { max-width: 1200px; }
+    /* container handled globally */
 }
 
 /* ========== DESKTOPS (992px - 1199px) ========== */
@@ -165,7 +165,7 @@
     .hero-carousel .carousel-caption { width: 95%; }
     .hero-carousel .carousel-caption h2 { font-size: 1.4rem; }
     .hero-carousel .carousel-control-prev,
-    .hero-carousel .carousel-control-next { display: none; }
+    .hero-carousel .carousel-control-next { display: flex; width: 38px; height: 38px; font-size: 12px; }
 
     /* Stats — very small screens */
     .stats-bar { padding: 8px 0; }

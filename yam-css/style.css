@@ -26,6 +26,18 @@
     --transition:    all 0.35s ease;
 }
 
+/* ---- FULL WIDTH OVERRIDE ---- */
+.container,
+.container-sm,
+.container-md,
+.container-lg,
+.container-xl,
+.container-xxl {
+    max-width: 100% !important;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
 /* ---- RESET & BASE ---- */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -269,9 +281,38 @@ ul { list-style: none; padding: 0; margin: 0; }
 .hero-carousel .carousel-control-next,
 .hero-carousel .carousel-indicators,
 .hero-carousel .carousel-indicators button,
-.hero-carousel .carousel-caption .btns a {
+.hero-carousel .carousel-caption .btns a,
+.hero-carousel .carousel-inner {
     pointer-events: auto;
     cursor: pointer;
+}
+/* Visible control buttons */
+.hero-carousel .carousel-control-prev,
+.hero-carousel .carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    bottom: auto;
+    width: 46px;
+    height: 46px;
+    background: rgba(255,255,255,0.25);
+    border: 2px solid rgba(255,255,255,0.6);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 14px;
+    z-index: 10;
+    opacity: 1;
+    transition: background 0.25s ease;
+}
+.hero-carousel .carousel-control-prev { left: 18px; }
+.hero-carousel .carousel-control-next { right: 18px; }
+.hero-carousel .carousel-control-prev:hover,
+.hero-carousel .carousel-control-next:hover {
+    background: var(--primary);
+    border-color: var(--primary);
 }
 .hero-carousel .carousel,
 .hero-carousel .carousel-inner { height: 100%; }
